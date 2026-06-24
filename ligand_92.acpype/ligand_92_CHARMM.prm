@@ -1,0 +1,122 @@
+* Force Field Parameter File.
+* 
+
+BOND
+n3 c6    0.00   0.000	!ATTN, need revision
+n3 c6    0.00   0.000
+c3 n3  325.90   1.465
+c3 n   328.70   1.462
+c  n   427.60   1.379
+ns c   427.60   1.379	! same as  c  n 
+ns ca  384.20   1.412	! same as  ca n 
+ns hn  403.20   1.013	! same as  hn n 
+c3 c3  300.90   1.538
+c3 hc  330.60   1.097
+c6 c6    0.00   0.000
+c6 hc    0.00   0.000
+c6 h1    0.00   0.000	! same as  c6 hc
+c3 ca  321.00   1.516
+c3 h1  330.60   1.097
+ca ca  461.10   1.398
+ca ha  345.80   1.086
+c  ca  345.90   1.491
+c  o   637.70   1.218
+
+ANGLE
+n3 c6 h1    0.000       0.000
+n3 c6 c6    0.000       0.000
+n3 c3 ca   66.200     112.160
+n3 c3 h1   49.500     109.880
+n  c3 c3   65.900     111.610
+n  c3 h1   49.800     108.880
+n  c  ca   67.700     115.250
+n  c  o    74.200     123.050
+ns c  ca   67.700     115.250	! same as ca c  n 
+ns c  o    74.200     123.050	! same as n  c  o 
+ns ca ca   67.900     120.190	! same as ca ca n 
+ns ca ca   67.900     120.190
+c3 c6 c6    0.000       0.000
+c3 c3 h1   46.400     109.560
+c6 c3 hc    0.000       0.000
+c6 c6 hc    0.000       0.000
+c6 c6 c6    0.000       0.000
+c6 c6 h1    0.000       0.000	! same as c6 c6 hc
+c6 n3 c3    0.000       0.000
+c3 ca ca   63.500     120.770
+ca c3 h1   47.000     109.560
+ca ca ca   66.600     120.020
+ca ca ha   48.200     119.880
+c3 n  c    63.400     120.690
+c3 c3 hc   46.300     109.800
+c  n  c    63.700     127.080
+c  ca ca   64.300     120.330
+ca c  o    68.700     122.600
+c  ns ca   63.800     123.710	! same as c  n  ca
+c  ns hn   48.300     117.550	! same as c  n  hn
+ca ns hn   47.600     116.000	! same as ca n  hn
+hc c3 hc   39.400     107.580
+hc c6 hc    0.000       0.000
+h1 c6 h1    0.000       0.000
+h1 c3 h1   39.200     108.460
+
+DIHEDRAL
+c6 n3 c6 h1      -nan         0       0.0
+c3 n3 c6 h1      -nan         0       0.0
+c6 n3 c6 c6      -nan         0       0.0
+c3 n3 c6 c6      -nan         0       0.0
+X  c3 n3 X      0.300         3       0.0
+c3 c3 n  c      0.500         4     180.0
+c3 c3 n  c      0.150         3     180.0
+c3 c3 n  c      0.000         2       0.0
+c3 c3 n  c      0.530         1       0.0
+X  c3 n  X      0.000         2       0.0
+X  c  n  X      2.500         2     180.0
+ca ns c  ca     2.500         2     180.0      ! same as X  c  n  X 
+hn ns c  ca     2.500         2     180.0      ! same as X  c  n  X 
+ca ns c  o      2.500         2     180.0      ! same as X  c  n  X 
+hn ns c  o      2.500         2     180.0      !same as hn n  c  o 
+hn ns c  o      2.500         2     180.0      ! same as hn n  c  o 
+c  ns ca ca     0.450         2     180.0      ! same as X  ca n  X 
+hn ns ca ca     0.450         2     180.0      ! same as X  ca n  X 
+hc c3 c6 c6      -nan         0       0.0
+c3 c3 c6 c6      -nan         0       0.0
+hc c3 c6 hc      -nan         0       0.0
+X  c3 c3 X      0.156         3       0.0
+hc c6 c6 c6      -nan         0       0.0
+c3 c6 c6 hc      -nan         0       0.0
+hc c6 c6 hc      -nan         0       0.0
+c3 c6 c6 c6      -nan         0       0.0
+c6 c6 c6 c6      -nan         0       0.0
+hc c6 c6 n3      -nan         0       0.0
+c6 c6 c6 h1      -nan         0       0.0      ! same as hc c6 c6 c6
+hc c6 c6 h1      -nan         0       0.0      ! same as hc c6 c6 hc
+c6 c6 c6 n3      -nan         0       0.0
+X  c3 ca X      0.000         2       0.0
+X  ca ca X      3.625         2     180.0
+X  c  ca X      1.000         2     180.0
+
+IMPHI
+c  c  n  c3     1.100         2     180.0	! Using default value
+c  ca ns hn     1.100         2     180.0	! Using default value
+c3 ca ca ca     1.100         2     180.0
+X  X  ca ha     1.100         2     180.0
+X  X  c  o     10.500         2     180.0
+c  ca ca ca     1.100         2     180.0	! Using default value
+ca ca ca ns     1.100         2     180.0	! Using default value
+
+NONBONDED  NBXMOD 5  GROUP SWITCH CDIEL -
+CUTNB 14.0  CTOFNB 12.0  CTONNB 10.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+!                Emin     Rmin/2              Emin/2     Rmin  (for 1-4's)
+!             (kcal/mol)    (A)
+n3      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+ n      0.00   -0.1700    1.8240      0.00   -0.0850    1.8240
+c3      0.00   -0.1094    1.9080      0.00   -0.0547    1.9080
+c6      0.00    0.0000    0.0000      0.00    0.0000    0.0000
+c6      0.00   -0.0000    0.0000      0.00   -0.0000    0.0000
+ca      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+ c      0.00   -0.0860    1.9080      0.00   -0.0430    1.9080
+ o      0.00   -0.2100    1.6612      0.00   -0.1050    1.6612
+hc      0.00   -0.0157    1.4870      0.00   -0.0078    1.4870
+h1      0.00   -0.0157    1.3870      0.00   -0.0078    1.3870
+ha      0.00   -0.0150    1.4590      0.00   -0.0075    1.4590
+hn      0.00   -0.0157    0.6000      0.00   -0.0078    0.6000
